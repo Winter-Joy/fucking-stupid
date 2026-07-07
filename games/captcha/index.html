@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>fucking stupid 验证码</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game" class="game-screen">
+    <div id="captcha-stage" class="captcha-stage">
+      <div id="captcha-card" class="captcha-card rough-box">
+        <h2 id="prompt" class="prompt">请点击所有包含 <strong>红绿灯</strong> 的方块</h2>
+        <div id="grid" class="grid"></div>
+        <button id="verify-btn" class="verify-btn">验证</button>
+      </div>
+    </div>
+
+    <div id="hud" class="hud hidden">
+      <div class="hud-item">关卡 <span id="level-num">1</span>/6</div>
+      <div class="hud-item">错误 <span id="wrong-num">0</span>/<span id="wrong-limit">3</span></div>
+      <div class="hud-item">时间 <span id="timer">20</span>s</div>
+    </div>
+
+    <div id="overlay-start" class="overlay">
+      <div class="overlay-card rough-box">
+        <h1 class="title-scribble">fucking stupid 验证码</h1>
+        <p>证明你是人类。</p>
+        <p>点击所有包含目标物体的方块，然后点验证。</p>
+        <p>选错或超时，系统会怀疑你是机器人。</p>
+        <button id="start-btn" class="btn-hand" style="margin-top:1rem;">开始验证</button>
+      </div>
+    </div>
+
+    <div id="overlay-win" class="overlay hidden">
+      <div class="overlay-card rough-box">
+        <h1 class="title-scribble">验证通过</h1>
+        <p>恭喜你，你被认定为人类。</p>
+        <p>虽然也没什么值得骄傲的。</p>
+        <button id="restart-win" class="btn-hand">再验证一次</button>
+      </div>
+    </div>
+
+    <div id="overlay-lose" class="overlay hidden">
+      <div class="overlay-card rough-box">
+        <h1 class="title-scribble" id="lose-title">验证失败</h1>
+        <p id="lose-reason">系统认为你是机器人。</p>
+        <button id="restart-lose" class="btn-hand">我不是机器人</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>
