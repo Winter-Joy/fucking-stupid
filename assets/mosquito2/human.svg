@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="600" height="240">
+  <defs>
+    <filter id="wobble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3"/>
+    </filter>
+  </defs>
+  <g filter="url(#wobble)" stroke="#2d3436" stroke-width="3" stroke-linecap="round">
+    <!-- pillow -->
+    <ellipse cx="75" cy="120" rx="55" ry="35" fill="#dfe6e9" stroke="#b2bec3"/>
+    <!-- head -->
+    <circle cx="130" cy="108" r="38" fill="#f7d794" stroke="#2d3436"/>
+    <!-- closed eye -->
+    <path d="M115 105 Q125 112 135 105" fill="none"/>
+    <!-- mouth -->
+    <path d="M122 128 Q130 132 138 128" fill="none"/>
+    <!-- hair -->
+    <path d="M95 85 Q110 60 140 68 Q165 75 168 100" fill="none"/>
+    <!-- body under blanket -->
+    <path d="M168 120 Q260 90 380 105 Q480 118 530 140" fill="none"/>
+    <!-- blanket -->
+    <path d="M168 120 Q260 90 380 105 Q480 118 530 140 L540 190 Q420 205 300 195 Q180 185 160 170 Z" fill="#74b9ff" stroke="#0984e3"/>
+    <!-- blanket folds -->
+    <path d="M220 110 Q230 150 225 190" fill="none" stroke="#0984e3"/>
+    <path d="M320 108 Q330 155 325 195" fill="none" stroke="#0984e3"/>
+    <path d="M420 120 Q430 160 425 195" fill="none" stroke="#0984e3"/>
+    <!-- exposed arm -->
+    <ellipse cx="245" cy="95" rx="55" ry="18" fill="#f7d794" transform="rotate(-8 245 95)"/>
+    <!-- exposed leg/foot sticking out -->
+    <ellipse cx="545" cy="150" rx="45" ry="16" fill="#f7d794" transform="rotate(6 545 150)"/>
+    <!-- ear hint -->
+    <path d="M100 100 Q92 108 100 116" fill="none" stroke="#e17055"/>
+  </g>
+</svg>

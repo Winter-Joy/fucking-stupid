@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>fucking stupid 广告</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game" class="game-screen">
+    <div id="desktop" class="desktop">
+      <div class="wallpaper">
+        <div class="icon"><span>📁</span><small>工作</small></div>
+        <div class="icon"><span>🗑️</span><small>回收站</small></div>
+        <div class="icon"><span>🦟</span><small>蚊子</small></div>
+        <div class="icon"><span>🩸</span><small>蚊子2</small></div>
+      </div>
+
+      <div id="ad-stage" class="ad-stage"></div>
+    </div>
+
+    <div id="hud" class="hud hidden">
+      <div class="hud-item">关卡 <span id="level-num">1</span>/6</div>
+      <div class="hud-item">误点 <span id="fake-num">0</span>/<span id="fake-limit">3</span></div>
+      <div class="hud-item">时间 <span id="timer">20</span>s</div>
+    </div>
+
+    <div id="overlay-start" class="overlay">
+      <div class="overlay-card rough-box">
+        <h1 class="title-scribble">fucking stupid 广告</h1>
+        <p>互联网上最恶心的东西，现在变成了游戏。</p>
+        <p>每关你都要找到真正的关闭按钮。</p>
+        <p>点错太多次，或者时间耗尽，就会被广告吞噬。</p>
+        <button id="start-btn" class="btn-hand" style="margin-top:1rem;">接受挑战</button>
+      </div>
+    </div>
+
+    <div id="overlay-win" class="overlay hidden">
+      <div class="overlay-card rough-box">
+        <h1 class="title-scribble">你赢了！</h1>
+        <p>居然真的有人能关掉所有广告。</p>
+        <p>建议去互联网公司上班。</p>
+        <button id="restart-win" class="btn-hand">再折磨一次</button>
+      </div>
+    </div>
+
+    <div id="overlay-lose" class="overlay hidden">
+      <div class="overlay-card rough-box">
+        <h1 class="title-scribble" id="lose-title">被广告打败了</h1>
+        <p id="lose-reason">你点错了太多假按钮。</p>
+        <button id="restart-lose" class="btn-hand">我不服</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>

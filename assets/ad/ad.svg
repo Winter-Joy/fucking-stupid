@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <filter id="wobble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2"/>
+    </filter>
+  </defs>
+  <g filter="url(#wobble)" stroke="#2d3436" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="10" y="15" width="100" height="90" rx="8" fill="#fff" />
+    <rect x="85" y="5" width="26" height="26" rx="13" fill="#636e72" />
+    <line x1="91" y1="11" x2="105" y2="25" stroke="#fff" stroke-width="3" />
+    <line x1="105" y1="11" x2="91" y2="25" stroke="#fff" stroke-width="3" />
+    <rect x="30" y="40" width="60" height="12" rx="4" fill="#ff7675" />
+    <rect x="25" y="60" width="70" height="8" rx="4" fill="#b2bec3" />
+    <rect x="35" y="75" width="50" height="18" rx="6" fill="#fdcb6e" />
+  </g>
+</svg>

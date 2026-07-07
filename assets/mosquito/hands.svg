@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 120" width="140" height="120">
+  <defs>
+    <filter id="hand-wobble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3"/>
+    </filter>
+  </defs>
+  <g filter="url(#hand-wobble)" stroke="#2d3436" stroke-width="3" stroke-linecap="round" fill="#f7d794">
+    <!-- left hand -->
+    <path d="M35 90 L35 55 Q35 40 45 35 Q55 30 60 45 L60 90 Z"/>
+    <path d="M45 55 L45 30 Q45 20 52 18 Q58 20 58 32 L58 55" fill="#f7d794"/>
+    <path d="M55 58 L55 28 Q55 18 62 16 Q68 18 68 30 L68 58" fill="#f7d794"/>
+    <path d="M65 60 L65 32 Q65 22 72 20 Q78 22 78 34 L78 60" fill="#f7d794"/>
+
+    <!-- right hand -->
+    <path d="M105 90 L105 55 Q105 40 95 35 Q85 30 80 45 L80 90 Z"/>
+    <path d="M95 55 L95 30 Q95 20 88 18 Q82 20 82 32 L82 55" fill="#f7d794"/>
+    <path d="M85 58 L85 28 Q85 18 78 16 Q72 18 72 30 L72 58" fill="#f7d794"/>
+    <path d="M75 60 L75 32 Q75 22 68 20 Q62 22 62 34 L62 60" fill="#f7d794"/>
+  </g>
+</svg>

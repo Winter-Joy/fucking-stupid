@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 200" width="120" height="200">
+  <defs>
+    <filter id="wobble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2"/>
+    </filter>
+  </defs>
+  <g filter="url(#wobble)" stroke="#2d3436" stroke-width="3" stroke-linecap="round">
+    <!-- handle -->
+    <rect x="50" y="110" width="20" height="75" rx="8" fill="#636e72"/>
+    <!-- rim -->
+    <ellipse cx="60" cy="60" rx="52" ry="52" fill="none" stroke="#2d3436" stroke-width="5"/>
+    <!-- grid -->
+    <line x1="20" y1="60" x2="100" y2="60"/>
+    <line x1="60" y1="20" x2="60" y2="100"/>
+    <line x1="32" y1="32" x2="88" y2="88"/>
+    <line x1="88" y1="32" x2="32" y2="88"/>
+    <line x1="60" y1="8" x2="60" y2="112"/>
+    <line x1="8" y1="60" x2="112" y2="60"/>
+    <!-- spark placeholder -->
+    <circle cx="60" cy="60" r="8" fill="rgba(100,200,255,0)" stroke="none"/>
+  </g>
+</svg>

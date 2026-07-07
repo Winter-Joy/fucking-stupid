@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <filter id="wobble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2"/>
+    </filter>
+  </defs>
+  <g filter="url(#wobble)" stroke="#2d3436" stroke-width="2.5" stroke-linecap="round" fill="none">
+    <line x1="50" y1="70" x2="50" y2="88" stroke-width="2"/>
+    <line x1="38" y1="48" x2="22" y2="32"/>
+    <line x1="62" y1="48" x2="78" y2="32"/>
+    <line x1="36" y1="58" x2="16" y2="58"/>
+    <line x1="64" y1="58" x2="84" y2="58"/>
+    <line x1="38" y1="70" x2="24" y2="84"/>
+    <line x1="62" y1="70" x2="76" y2="84"/>
+    <path d="M40 45 Q18 22 14 50 Q22 74 46 58" fill="rgba(255,255,255,0.65)"/>
+    <path d="M60 45 Q82 22 86 50 Q78 74 54 58" fill="rgba(255,255,255,0.65)"/>
+    <ellipse cx="50" cy="55" rx="11" ry="22" fill="#636e72"/>
+    <line x1="43" y1="45" x2="57" y2="45"/>
+    <line x1="42" y1="55" x2="58" y2="55"/>
+    <line x1="43" y1="65" x2="57" y2="65"/>
+    <circle cx="50" cy="78" r="6" fill="#2d3436"/>
+  </g>
+</svg>

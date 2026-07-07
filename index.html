@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stupid Games — 手绘网页游戏</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared/styles.css" />
+</head>
+<body>
+  <main class="center-flex">
+    <div class="container" style="text-align:center;">
+      <h1 class="title-scribble">Stupid Games</h1>
+      <p class="subtitle">一些没什么用但很好笑的手绘网页游戏</p>
+
+      <section class="rough-box" style="padding:2rem; margin-top:1rem; display:inline-block; max-width:420px;">
+        <h2 style="margin:0 0 1rem; font-size:1.8rem;">🦟 fucking stupid 蚊子</h2>
+        <p style="margin:0 0 1.5rem; line-height:1.5;">
+          关灯，听声，拍蚊子。<br>
+          小心别被吸成干尸。
+        </p>
+        <a href="games/mosquito/" class="btn-hand">开始拍蚊子</a>
+      </section>
+
+      <section class="rough-box" style="padding:2rem; margin-top:1rem; display:inline-block; max-width:420px; background:#fff8f0; border-color:var(--blood);">
+        <img src="assets/mosquito2/mosquito.svg" alt="蚊子 2 预览" style="width:90px; height:90px; margin-bottom:0.6rem; filter:url(#rough-filter); animation:preview-flutter 0.12s infinite alternate;" />
+        <h2 style="margin:0 0 1rem; font-size:1.8rem;">🩸 fucking stupid 蚊子 2：复仇</h2>
+        <p style="margin:0 0 1.5rem; line-height:1.5;">
+          这次你当蚊子。<br>
+          趁他熟睡吸血，别被拍死。<br>
+          小心电蚊拍和蚊香。
+        </p>
+        <a href="games/mosquito2/" class="btn-hand">开始吸血</a>
+      </section>
+
+      <section class="rough-box" style="padding:2rem; margin-top:1rem; display:inline-block; max-width:420px; background:#f0f8ff; border-color:#0984e3;">
+        <span style="position:absolute; top:-12px; right:-12px; background:#0984e3; color:#fff; padding:0.3rem 0.7rem; border-radius:255px 15px 225px 15px / 15px 225px 15px 255px; font-size:0.95rem; transform:rotate(6deg); box-shadow:2px 2px 0 rgba(0,0,0,0.2);">NEW</span>
+        <img src="assets/ad/ad.svg" alt="广告游戏预览" style="width:90px; height:90px; margin-bottom:0.6rem; filter:url(#rough-filter);" />
+        <h2 style="margin:0 0 1rem; font-size:1.8rem;">📢 fucking stupid 广告</h2>
+        <p style="margin:0 0 1.5rem; line-height:1.5;">
+          找到真正的关闭按钮。<br>
+          每关藏法都不一样。<br>
+          点错就输了。
+        </p>
+        <a href="games/ad/" class="btn-hand">关掉广告</a>
+      </section>
+
+      <p style="margin-top:2rem; opacity:0.6; font-size:0.95rem;">第三期 · 更多 stupid 游戏加载中……</p>
+    </div>
+  </main>
+
+  <script type="module">
+    import { ensureRoughFilter } from './shared/hand-drawn.js';
+    ensureRoughFilter();
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>fucking stupid 蚊子 2：复仇</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../shared/styles.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game" class="game-screen">
+    <div id="bedroom" class="bedroom">
+      <div id="human" class="human">
+        <img src="../../assets/mosquito2/human.svg" alt="睡觉的人类" draggable="false" />
+      </div>
+      <div id="zzz" class="zzz-layer"></div>
+      <div id="slap" class="slap hidden"></div>
+
+      <div id="racket" class="racket">
+        <img src="../../assets/mosquito2/racket.svg" alt="电蚊拍" draggable="false" />
+        <div id="racket-glow" class="racket-glow"></div>
+      </div>
+
+      <div id="coil" class="coil">
+        <img src="../../assets/mosquito2/coil.svg" alt="蚊香" draggable="false" />
+      </div>
+
+      <div id="waters"></div>
+
+      <div id="player" class="player">
+        <img src="../../assets/mosquito2/mosquito.svg" alt="蚊子" draggable="false" />
+      </div>
+
+      <div id="hint" class="hint hidden">长按吸血</div>
+    </div>
+
+    <div id="hud" class="hud hidden">
+      <div class="bar-wrap">
+        <span class="bar-label">吸血量</span>
+        <div class="bar blood2-bar"><div id="blood2-fill" class="bar-fill blood2-fill"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <span class="bar-label">体力</span>
+        <div class="bar stamina-bar"><div id="stamina-fill" class="bar-fill stamina-fill"></div></div>
+      </div>
+      <div class="bar-wrap">
+        <span class="bar-label">警觉</span>
+        <div class="bar alert-bar"><div id="alert-fill" class="bar-fill alert-fill"></div></div>
+      </div>
+    </div>
+
+    <div id="overlay-start" class="overlay">
+      <div class="overlay-card rough-box">
+        <h1 class="title-scribble">蚊子 2：复仇</h1>
+        <p>人类睡着了。这次轮到你当蚊子。</p>
+        <p>拖动屏幕飞行，落在皮肤上长按吸血。</p>
+        <p>别飞太近、别吸太久，否则他会醒。</p>
+        <p>避开通电的电蚊拍和蚊香，渴了去喝墙上的水。</p>
+        <button id="start-btn" class="btn-hand" style="margin-top:1rem;">开始吸血</button>
+      </div>
+    </div>
+
+    <div id="overlay-win" class="overlay hidden">
+      <div class="overlay-card rough-box">
+        <h1 class="title-scribble">吸饱了！</h1>
+        <p>你成功把这个人类吸成了葡萄干。</p>
+        <button id="restart-win" class="btn-hand">再吸一轮</button>
+      </div>
+    </div>
+
+    <div id="overlay-lose" class="overlay hidden">
+      <div class="overlay-card rough-box">
+        <h1 class="title-scribble" id="lose-title">被拍死了…</h1>
+        <p id="lose-reason">人类醒来一巴掌送你上路。</p>
+        <button id="restart-lose" class="btn-hand">复仇</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="game.js"></script>
+</body>
+</html>

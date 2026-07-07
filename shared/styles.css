@@ -1,0 +1,106 @@
+:root {
+  --paper: #f7f1e3;
+  --ink: #2d3436;
+  --blood: #d63031;
+  --dark: #0a0a0a;
+  --accent: #fdcb6e;
+  --font-hand: 'Gloria Hallelujah', 'Caveat', 'Comic Sans MS', cursive, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: var(--font-hand);
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(0,0,0,0.03) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(0,0,0,0.03) 0%, transparent 20%);
+}
+
+.rough-box {
+  position: relative;
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  box-shadow: 4px 5px 0 rgba(0,0,0,0.15);
+  filter: url(#rough-filter);
+}
+
+.btn-hand {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  font-family: var(--font-hand);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--accent);
+  border: 3px solid var(--ink);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  cursor: pointer;
+  transform: rotate(-1.5deg);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+  filter: url(#rough-filter);
+  text-decoration: none;
+}
+
+.btn-hand:hover {
+  transform: rotate(0deg) scale(1.03);
+  box-shadow: 5px 6px 0 rgba(0,0,0,0.2);
+}
+
+.btn-hand:active {
+  transform: rotate(1deg) scale(0.97);
+  box-shadow: 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+.btn-hand:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(0.6) url(#rough-filter);
+}
+
+.title-scribble {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  text-align: center;
+  transform: rotate(-2deg);
+  text-shadow: 2px 3px 0 rgba(0,0,0,0.1);
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0 0 2rem;
+  opacity: 0.85;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.center-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes preview-flutter {
+  from { transform: scaleX(1) rotate(-4deg); }
+  to { transform: scaleX(0.88) rotate(4deg); }
+}
