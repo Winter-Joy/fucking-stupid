@@ -15,48 +15,50 @@
       <h1 class="title-scribble">Stupid Games</h1>
       <p class="subtitle">一些没什么用但很好笑的手绘网页游戏</p>
 
-      <section class="rough-box" style="padding:2rem; margin-top:1rem; display:inline-block; max-width:420px;">
-        <h2 style="margin:0 0 1rem; font-size:1.8rem;">🦟 fucking stupid 蚊子</h2>
-        <p style="margin:0 0 1.5rem; line-height:1.5;">
-          关灯，听声，拍蚊子。<br>
-          小心别被吸成干尸。
-        </p>
-        <a href="games/mosquito/" class="btn-hand">开始拍蚊子</a>
-      </section>
+      <div class="game-list">
+        <section class="rough-box game-card">
+          <h2 class="game-card__title">🦟 fucking stupid 蚊子</h2>
+          <p class="game-card__desc">
+            关灯，听声，拍蚊子。<br>
+            小心别被吸成干尸。
+          </p>
+          <a href="games/mosquito/" class="btn-hand">开始拍蚊子</a>
+        </section>
 
-      <section class="rough-box" style="padding:2rem; margin-top:1rem; display:inline-block; max-width:420px; background:#fff8f0; border-color:var(--blood);">
-        <img src="assets/mosquito2/mosquito.svg" alt="蚊子 2 预览" style="width:90px; height:90px; margin-bottom:0.6rem; filter:url(#rough-filter); animation:preview-flutter 0.12s infinite alternate;" />
-        <h2 style="margin:0 0 1rem; font-size:1.8rem;">🩸 fucking stupid 蚊子 2：复仇</h2>
-        <p style="margin:0 0 1.5rem; line-height:1.5;">
-          这次你当蚊子。<br>
-          趁他熟睡吸血，别被拍死。<br>
-          小心电蚊拍和蚊香。
-        </p>
-        <a href="games/mosquito2/" class="btn-hand">开始吸血</a>
-      </section>
+        <section class="rough-box game-card game-card--blood">
+          <img src="assets/mosquito2/mosquito.svg" alt="蚊子 2 预览" class="game-card__preview" style="animation:preview-flutter 0.12s infinite alternate;" />
+          <h2 class="game-card__title">🩸 fucking stupid 蚊子 2：复仇</h2>
+          <p class="game-card__desc">
+            这次你当蚊子。<br>
+            趁他熟睡吸血，别被拍死。<br>
+            小心电蚊拍和蚊香。
+          </p>
+          <a href="games/mosquito2/" class="btn-hand">开始吸血</a>
+        </section>
 
-      <section class="rough-box" style="padding:2rem; margin-top:1rem; display:inline-block; max-width:420px; background:#f0f8ff; border-color:#0984e3;">
-        <img src="assets/ad/ad.svg" alt="广告游戏预览" style="width:90px; height:90px; margin-bottom:0.6rem; filter:url(#rough-filter);" />
-        <h2 style="margin:0 0 1rem; font-size:1.8rem;">📢 fucking stupid 广告</h2>
-        <p style="margin:0 0 1.5rem; line-height:1.5;">
-          找到真正的关闭按钮。<br>
-          每关藏法都不一样。<br>
-          点错就输了。
-        </p>
-        <a href="games/ad/" class="btn-hand">关掉广告</a>
-      </section>
+        <section class="rough-box game-card game-card--blue">
+          <img src="assets/ad/ad.svg" alt="广告游戏预览" class="game-card__preview" />
+          <h2 class="game-card__title">📢 fucking stupid 广告</h2>
+          <p class="game-card__desc">
+            找到真正的关闭按钮。<br>
+            每关藏法都不一样。<br>
+            点错就输了。
+          </p>
+          <a href="games/ad/" class="btn-hand">关掉广告</a>
+        </section>
 
-      <section class="rough-box" style="padding:2rem; margin-top:1rem; display:inline-block; max-width:420px; background:#f7f1e3; border-color:#00b894;">
-        <span style="position:absolute; top:-12px; right:-12px; background:#00b894; color:#fff; padding:0.3rem 0.7rem; border-radius:255px 15px 225px 15px / 15px 225px 15px 255px; font-size:0.95rem; transform:rotate(6deg); box-shadow:2px 2px 0 rgba(0,0,0,0.2);">NEW</span>
-        <img src="assets/captcha/traffic-light.svg" alt="验证码游戏预览" style="width:90px; height:90px; margin-bottom:0.6rem; filter:url(#rough-filter);" />
-        <h2 style="margin:0 0 1rem; font-size:1.8rem;">🤖 fucking stupid 验证码</h2>
-        <p style="margin:0 0 1.5rem; line-height:1.5;">
-          请点击所有红绿灯/自行车/人行横道。<br>
-          图片会越来越离谱。<br>
-          错了就是机器人。
-        </p>
-        <a href="games/captcha/" class="btn-hand">开始验证</a>
-      </section>
+        <section class="rough-box game-card game-card--paper">
+          <span class="game-card__badge">NEW</span>
+          <img src="assets/captcha/traffic-light.svg" alt="验证码游戏预览" class="game-card__preview" />
+          <h2 class="game-card__title">🤖 fucking stupid 验证码</h2>
+          <p class="game-card__desc">
+            请点击所有红绿灯/自行车/人行横道。<br>
+            图片会越来越离谱。<br>
+            错了就是机器人。
+          </p>
+          <a href="games/captcha/" class="btn-hand">开始验证</a>
+        </section>
+      </div>
 
       <p style="margin-top:2rem; opacity:0.6; font-size:0.95rem;">第四期 · 更多 stupid 游戏加载中……</p>
     </div>

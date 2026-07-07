@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# /push - 一键 commit 并 push 到 GitHub
+# 用法：./push [commit-message]
+
+REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
+cd "$REPO_ROOT"
+
+MESSAGE="${1:-auto: update at $(date '+%Y-%m-%d %H:%M:%S')}"
+BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+REMOTE="origin"
+
+echo "📦 添加所有更改..."
+git add -A
+
+if git diff --cached --quiet; then
+  echo "✅ 没有可提交的更改。"
+else
+  echo "📝 提交: $MESSAGE"
+  git commit -m "$MESSAGE"
+fi
+
+echo "🚀 推送到 $REMOTE/$BRANCH..."
+git push "$REMOTE" "$BRANCH"
+
+echo "✨ 完成！"

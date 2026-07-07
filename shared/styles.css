@@ -96,6 +96,68 @@ html, body {
   min-height: 100vh;
 }
 
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.game-card {
+  flex: 1 1 280px;
+  max-width: 420px;
+  min-width: 260px;
+  padding: 2rem;
+  text-align: center;
+  background: #fff;
+}
+
+.game-card__badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  padding: 0.3rem 0.7rem;
+  background: #00b894;
+  color: #fff;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  font-size: 0.95rem;
+  transform: rotate(6deg);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+.game-card__preview {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 0.6rem;
+  filter: url(#rough-filter);
+}
+
+.game-card__title {
+  margin: 0 0 1rem;
+  font-size: 1.8rem;
+}
+
+.game-card__desc {
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.game-card--blood {
+  background: #fff8f0;
+  border-color: var(--blood);
+}
+
+.game-card--blue {
+  background: #f0f8ff;
+  border-color: #0984e3;
+}
+
+.game-card--paper {
+  background: #f7f1e3;
+  border-color: #00b894;
+}
+
 .hidden {
   display: none !important;
 }
